@@ -6833,13 +6833,16 @@ var seen = bot.memory.get( 'users' ),
 	//hardcoded for some (in)sanity. Change accordingly.
 	ownerRoom = 17;
 
-var message = "Welcome to the JavaScript chat! Please review the " +
+var message = "Welcome to the CR Help Desk, I'm _Santa's Helper_ a bot run by @Quill designed to help you! For some information please read the " +
 		bot.adapter.link(
-			"room pseudo-rules",
-			"http://rlemon.github.com/so-chat-javascript-rules/"
+			"A guide to Code Review for Stack Overflow users",
+			"http://meta.codereview.stackexchange.com/q/5777"
 		) +
-		". Please don't ask if you can ask or if anyone's around; just ask " +
-		"your question, and if anyone's free and interested they'll help.";
+		"or" + bot.adapter.link(
+			"How to get the best value out of Code Review - Asking Questions"
+			"http://meta.codereview.stackexchange.com/q/2436"
+		) +
+		". Please don't ask if you can ask or if anyone's around; just ask your question!";
 
 function welcome ( name, room ) {
 	bot.adapter.out.add( bot.adapter.reply(name) + " " + message, room );
@@ -6850,13 +6853,11 @@ IO.register( 'input', function welcomeListener ( msgObj ) {
 	    user = bot.users[ msgObj.user_id ],
 		room = msgObj.room_id;
 
-	var semiLegitUser = user && isSemiLegitUser( user );
+	var semiLegitUser = user && isSemiLegitUser(user);
 	if (
-		Number( room ) !== ownerRoom || semiLegitUser  || seen[ msgObj.user_id ]
-	) {
-		if ( semiLegitUser ) {
-			finish( true );
-		}
+		Number(room) !== ownerRoom || semiLegitUser  || seen[msgObj.user_id]
+	){
+		if (semiLegitUser) { finish(true); }
 		return;
 	}
 
