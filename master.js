@@ -6838,7 +6838,7 @@ var message = "Welcome to the CR Help Desk, I'm _Santa's Helper_ a bot run by @Q
 			"A guide to Code Review for Stack Overflow users",
 			"http://meta.codereview.stackexchange.com/q/5777"
 		) +
-		"or" + bot.adapter.link(
+		" or " + bot.adapter.link(
 			"How to get the best value out of Code Review - Asking Questions",
 			"http://meta.codereview.stackexchange.com/q/2436"
 		) +
