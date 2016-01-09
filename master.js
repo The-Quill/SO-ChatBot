@@ -6839,7 +6839,7 @@ var message = "Welcome to the CR Help Desk, I'm _Santa's Helper_ a bot run by @Q
 			"http://meta.codereview.stackexchange.com/q/5777"
 		) +
 		"or" + bot.adapter.link(
-			"How to get the best value out of Code Review - Asking Questions"
+			"How to get the best value out of Code Review - Asking Questions",
 			"http://meta.codereview.stackexchange.com/q/2436"
 		) +
 		". Please don't ask if you can ask or if anyone's around; just ask your question!";
