@@ -2532,18 +2532,7 @@ bot.adapter = {
 	},
 
 	getCurrentSite : function () {
-		var site = /chat\.(\w+)/.exec( location )[ 1 ];
-
-		if ( site !== 'stackexchange' ) {
-			return site;
-		}
-
-		var siteRoomsLink = document.getElementById( 'siterooms' ).href;
-
-		// #170. thanks to @patricknc4pk for the original fix.
-		site = /host=(.+?)\./.exec( siteRoomsLink )[ 1 ];
-
-		return site;
+		return $('head link[rel="shortcut icon"]')[0].href.match(/static.net\/([^\/]+)\//)[1];
 	},
 
 	//a pretty crucial function. accepts the msgObj we know nothing about,
