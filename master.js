@@ -6736,7 +6736,8 @@ var weather = {
 			jsonpName : 'callback',
 			data : {
 				q : city,
-				type : 'json'
+				type : 'json',
+				appid: '96271590543b0f118c8ce11b3aad43b4'
 			},
 
 			fun : this.finishCb( cb ),
