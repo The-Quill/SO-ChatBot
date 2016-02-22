@@ -1,5 +1,5 @@
-var Nightmare = require('nightmare'),
-	readline = require('readline');
+var Nightmare = require('nightmare');
+var readline = require('readline');
 
 var hound = new Nightmare({
 	cookiesFile: 'cookies.jar'
@@ -40,7 +40,9 @@ hound.drainQueue = function (cb) {
 function seLogin () {
 	hound
 		.type('#se-login input[type="email"]', config.email)
+		.wait()
 		.type('#se-login input[type="password"]', config.password)
+		.wait()
 		.click('#se-login input[type="button"]')
 		.wait()
 		.screenshot('pics/login.png');
