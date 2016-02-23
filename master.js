@@ -1901,8 +1901,6 @@ function getSortedCommands() {
     var commandGroups = commandNames.groupBy(function ( cmdName ) {
         return bot.commands[ cmdName ].learned ? 'learned' : 'builtin';
     });
-    console.log(sortedCommands);
-    console.log(commandGroups);
     var sortedCommands = commandGroups.builtin.sort().concat(
         commandGroups.learned ? commandGroups.learned.sort() : []
     );
