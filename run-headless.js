@@ -57,9 +57,7 @@ function injectToChat (hound) {
 			var script = document.createElement('script');
 			script.src = 'https://cdn.rawgit.com/The-Quill/SO-ChatBot/master/master.js';
 			script.onload = function() {
-				bot.activateDevMode();
 				console.log('Loaded bot');
-				bot.adapter.out.add('I will derive!');
 			};
 			document.head.appendChild(script);
 		}, function () {
