@@ -55,7 +55,7 @@ function injectToChat (hound) {
 		.screenshot('pics/chat.png')
 		.evaluate(function () {
 			var script = document.createElement('script');
-			script.src = 'https://cdn.rawgit.com/The-Quill/SO-ChatBot/master/master.js';
+			script.src = 'https://rawgit.com/The-Quill/SO-ChatBot/master/master.js';
 			script.onload = function() {
 				console.log('Loaded bot');
 			};
