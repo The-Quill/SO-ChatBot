@@ -2,6 +2,7 @@ var Nightmare = require('nightmare');
 var readline = require('readline');
 
 var hound = new Nightmare({
+    webSecurity: 'no',
 	cookiesFile: 'cookies.jar'
 });
 
@@ -54,7 +55,7 @@ function injectToChat (hound) {
 		.screenshot('pics/chat.png')
 		.evaluate(function () {
 			var script = document.createElement('script');
-			script.src = 'https://raw.github.com/Zirak/SO-ChatBot/master/master.js';
+			script.src = 'https://cdn.rawgit.com/The-Quill/SO-ChatBot/master/master.js';
 			script.onload = function() {
 				bot.activateDevMode();
 				console.log('Loaded bot');
