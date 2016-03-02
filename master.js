@@ -853,7 +853,8 @@ var input = {
         var that = this,
             providedRoomid = ( roomid !== undefined );
         roomid = roomid || adapter.roomid;
-
+        console.log(roomid);
+        console.log(fkey({roomid: roomid}));
         IO.xhr({
             url : '/ws-auth',
             data : fkey({
